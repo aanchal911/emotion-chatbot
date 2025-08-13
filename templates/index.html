@@ -3,34 +3,55 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Aashu - Emotional Counselor</title>
+    <title>Aashu - AI Emotional Counselor</title>
     <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
     <div class="container">
         <header>
-            <h1>Aashu - Your Emotional Support Counselor</h1>
-            <p>I'm here to listen and support you through whatever you're feeling.</p>
+            <h1>Aashu - AI Emotional Counselor</h1>
+            <p>Powered by Google Gemini AI - I understand and respond naturally</p>
+            <div class="mood-indicator">
+                <span id="current-mood">🤖 AI Ready</span>
+            </div>
         </header>
         
         <div class="chat-container">
             <div id="chat-messages">
                 <div class="message bot-message">
+                    <div class="message-avatar">🤗</div>
                     <div class="message-content">
-                        Hello! I'm Aashu, your emotional support counselor. Feel free to share what's on your mind.
+                        <div class="message-text">Hello! I'm Aashu, your AI emotional counselor. I can understand context, remember our conversation, and respond naturally. I'm here to provide genuine support and have meaningful conversations about whatever is on your mind. What would you like to talk about today?</div>
+                        <div class="message-time">Just now</div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="typing-indicator" id="typing-indicator" style="display: none;">
+                <div class="message bot-message">
+                    <div class="message-avatar">🧠</div>
+                    <div class="message-content">
+                        <div class="typing-dots">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <div class="input-container">
-                <input type="text" id="user-input" placeholder="Type your message here..." maxlength="500">
-                <button id="send-btn">Send</button>
-                <button id="clear-btn">Clear Chat</button>
+                <input type="text" id="user-input" placeholder="Share what's on your mind..." maxlength="1000">
+                <div class="button-row">
+                    <button id="send-btn">Send</button>
+                    <button id="clear-btn">Clear</button>
+                </div>
             </div>
         </div>
         
         <footer>
-            <p><strong>Important:</strong> This is for emotional support only. For serious mental health concerns, please consult a professional.</p>
+            <p><strong>AI-Powered:</strong> Aashu uses Google Gemini AI for intelligent responses.</p>
+            <p><strong>Important:</strong> For serious mental health concerns, please consult a professional.</p>
         </footer>
     </div>
 
