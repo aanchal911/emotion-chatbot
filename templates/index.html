@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aashu - Emotional Counselor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Aashu - Your Emotional Support Counselor</h1>
+            <p>I'm here to listen and support you through whatever you're feeling.</p>
+        </header>
+        
+        <div class="chat-container">
+            <div id="chat-messages">
+                <div class="message bot-message">
+                    <div class="message-content">
+                        Hello! I'm Aashu, your emotional support counselor. Feel free to share what's on your mind.
+                    </div>
+                </div>
+            </div>
+            
+            <div class="input-container">
+                <input type="text" id="user-input" placeholder="Type your message here..." maxlength="500">
+                <button id="send-btn">Send</button>
+                <button id="clear-btn">Clear Chat</button>
+            </div>
+        </div>
+        
+        <footer>
+            <p><strong>Important:</strong> This is for emotional support only. For serious mental health concerns, please consult a professional.</p>
+        </footer>
+    </div>
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

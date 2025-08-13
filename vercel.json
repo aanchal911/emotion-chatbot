@@ -1,0 +1,18 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "app_enhanced.py",
+      "use": "@vercel/python"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "app_enhanced.py"
+    }
+  ],
+  "env": {
+    "GEMINI_API_KEY": "AIzaSyDvtDGHgRm2Rn4dOV6c8dIz3yTVEea4H3g"
+  }
+}
