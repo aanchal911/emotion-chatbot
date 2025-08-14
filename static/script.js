@@ -114,7 +114,7 @@ async function clearChat() {
                 <div class="message bot-message">
                     <div class="message-avatar">🤗</div>
                     <div class="message-content">
-                        <div class="message-text">Hello! I'm Aashu, your AI emotional counselor. I can understand context, remember our conversation, and respond naturally. I'm here to provide genuine support and have meaningful conversations about whatever is on your mind. What would you like to talk about today?</div>
+                        <div class="message-text">Hello! I'm Veda, your AI emotional counselor. I can understand context, remember our conversation, and respond naturally. I'm here to provide genuine support and have meaningful conversations about whatever is on your mind. What would you like to talk about today?</div>
                         <div class="message-time">${formatTime()}</div>
                     </div>
                 </div>

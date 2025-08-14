@@ -5,7 +5,7 @@ import json
 
 class ProfessionalCounselor:
     def __init__(self):
-        self.name = "Aashu"
+        self.name = "Veda"
         self.session_data = {
             'conversation_count': 0,
             'emotional_patterns': {},
