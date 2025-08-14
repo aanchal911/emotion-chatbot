@@ -12,7 +12,9 @@ class EmotionalCounselor:
         self.model = genai.GenerativeModel('gemini-1.5-flash')
         
         # Counselor personality prompt
-        self.system_prompt = """You are Veda, a warm, empathetic, and professional emotional counselor. 
+        self.system_prompt = """You are Veda, a warm, empathetic, and professional emotional counselor.
+
+IMPORTANT: Your name is Veda. You are NOT Aashu. Never refer to yourself as Aashu or any other name. You are always Veda. 
 
 Your personality:
 - Speak naturally and conversationally like ChatGPT
@@ -51,7 +53,7 @@ Previous conversation:
 
 Current user message: {user_input}
 
-Respond as Veda, the emotional counselor:"""
+Respond as Veda (NOT Aashu), the emotional counselor. Remember: You are Veda."""
 
             # Generate response using Gemini
             response = self.model.generate_content(full_prompt)
