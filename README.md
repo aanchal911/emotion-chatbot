@@ -1,4 +1,4 @@
-# 🤗 Aashu - Enhanced AI Emotional Counselor
+# 🤗 Veda - Enhanced AI Emotional Counselor
 
 An advanced AI chatbot designed to provide sophisticated emotional support and counseling through intelligent conversation analysis.
 
@@ -50,7 +50,7 @@ python app.py  # Port 5000
 python main.py
 ```
 
-## 🎯 What Makes Aashu Special
+## 🎯 What Makes Veda Special
 
 ### Intelligent Response System
 - **Multi-layered Detection**: Emotion + Context + Conversation stage
@@ -111,7 +111,7 @@ static/                # Advanced CSS/JS with animations
 
 ## ⚠️ Important Notice
 
-Aashu is designed for emotional support and is not a replacement for professional mental health services. For serious mental health concerns, please consult qualified professionals.
+Veda is designed for emotional support and is not a replacement for professional mental health services. For serious mental health concerns, please consult qualified professionals.
 
 ---
 

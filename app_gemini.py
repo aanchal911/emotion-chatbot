@@ -85,14 +85,14 @@ def export_chat():
         formatted_conversation.append({
             'timestamp': entry['timestamp'],
             'user_message': entry['user'],
-            'aashu_response': entry['bot'],
+            'veda_response': entry['bot'],
             'detected_emotion': entry.get('emotion', 'neutral')
         })
     
     return jsonify({'conversation': formatted_conversation})
 
 if __name__ == '__main__':
-    print("🚀 Starting Aashu - AI Emotional Counselor (Gemini Powered)")
+    print("🚀 Starting Veda - AI Emotional Counselor (Gemini Powered)")
     print("📝 Don't forget to add your Gemini API key in gemini_counselor.py")
     print("🔗 Get free API key: https://makersuite.google.com/app/apikey")
     print("🌐 Server will run on: http://localhost:5002")

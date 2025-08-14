@@ -4,7 +4,7 @@ from datetime import datetime
 
 class EnhancedEmotionalCounselor:
     def __init__(self):
-        self.name = "Aashu"
+        self.name = "Veda"
         
         # Enhanced emotion patterns with warm, empathetic responses
         self.emotion_patterns = {

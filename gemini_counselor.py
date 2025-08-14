@@ -4,7 +4,7 @@ from datetime import datetime
 
 class GeminiCounselor:
     def __init__(self):
-        self.name = "Aashu"
+        self.name = "Veda"
         self.conversation_history = []
         
         # Configure Gemini with your API key
@@ -12,7 +12,7 @@ class GeminiCounselor:
         self.model = genai.GenerativeModel('gemini-1.5-flash')
         
         # Counselor personality prompt
-        self.system_prompt = """You are Aashu, a warm, empathetic, and professional emotional counselor. 
+        self.system_prompt = """You are Veda, a warm, empathetic, and professional emotional counselor. 
 
 Your personality:
 - Speak naturally and conversationally like ChatGPT
@@ -41,7 +41,7 @@ Remember: You're having a natural conversation, not giving a therapy session. Be
             if self.conversation_history:
                 recent_messages = self.conversation_history[-3:]  # Last 3 exchanges
                 for msg in recent_messages:
-                    context += f"User: {msg['user']}\nAashu: {msg['bot']}\n"
+                    context += f"User: {msg['user']}\nVeda: {msg['bot']}\n"
             
             # Create full prompt
             full_prompt = f"""{self.system_prompt}
@@ -51,7 +51,7 @@ Previous conversation:
 
 Current user message: {user_input}
 
-Respond as Aashu, the emotional counselor:"""
+Respond as Veda, the emotional counselor:"""
 
             # Generate response using Gemini
             response = self.model.generate_content(full_prompt)
@@ -60,7 +60,7 @@ Respond as Aashu, the emotional counselor:"""
             ai_response = response.text.strip()
             
             # Remove any "Aashu:" prefix if present
-            if ai_response.startswith("Aashu:"):
+            if ai_response.startswith("Veda:"):
                 ai_response = ai_response[6:].strip()
             
             return ai_response
@@ -115,7 +115,7 @@ Respond as Aashu, the emotional counselor:"""
 def test_counselor():
     counselor = GeminiCounselor()
     
-    print("🤗 Aashu - AI Emotional Counselor (Powered by Gemini)")
+    print("🤗 Veda - AI Emotional Counselor (Powered by Gemini)")
     print("Note: Add your Gemini API key to enable AI responses")
     print("Get free API key: https://makersuite.google.com/app/apikey")
     print("-" * 50)
@@ -124,11 +124,11 @@ def test_counselor():
         user_input = input("\nYou: ").strip()
         
         if user_input.lower() in ['quit', 'exit', 'bye']:
-            print(f"\nAashu: Take care of yourself. Remember, you're stronger than you know, and it's always okay to reach out for support. 💙")
+            print(f"\nVeda: Take care of yourself. Remember, you're stronger than you know, and it's always okay to reach out for support. 💙")
             break
         
         response = counselor.chat(user_input)
-        print(f"\nAashu: {response}")
+        print(f"\nVeda: {response}")
 
 if __name__ == "__main__":
     test_counselor()
